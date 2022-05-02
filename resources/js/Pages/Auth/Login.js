@@ -4,7 +4,7 @@ import Checkbox from "./components/Checkbox";
 import Input from "./components/Input";
 import Label from "./components/Label";
 import ValidationErrors from "./components/ValidationErrors";
-import { Head, Link, useForm } from "@inertiajs/inertia-react";
+import { Head, useForm } from "@inertiajs/inertia-react";
 import Guest from "@/Layouts/Guest";
 
 const Login = ({ status, canResetPassword }) => {

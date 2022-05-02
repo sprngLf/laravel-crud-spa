@@ -3,7 +3,6 @@ import Layout from "@/Layouts/Layout"
 import ContactForm from "@/Components/ContactForm"
 import Button from "@/Components/Button"
 import { useForm } from "@inertiajs/inertia-react"
-
 import confirmToast from "@/lib/confirmToast"
 import toastPromise from "@/lib/toastPromise"
 

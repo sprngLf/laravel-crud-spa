@@ -1,7 +1,7 @@
 import Layout from "@/Layouts/Layout";
 import { Head } from '@inertiajs/inertia-react'
 
-const Dashboard = (props) => {
+const Dashboard = () => {
     return (
         <>
         <Head title="Dashboard" />

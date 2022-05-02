@@ -1,11 +1,9 @@
-import { createContext, useEffect } from "react"
+import { createContext } from "react"
 import Nav from "./Nav"
 import SideNav from "./SideNav"
 import { usePage } from "@inertiajs/inertia-react"
-
 import { ToastContainer, Flip } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
 import toastPromise from "@/lib/toastPromise"
 
 export const LayoutContext = createContext()

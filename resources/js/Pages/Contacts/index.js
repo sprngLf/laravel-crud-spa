@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react"
 import { Inertia } from "@inertiajs/inertia"
 import { Head, Link, usePage } from "@inertiajs/inertia-react"
-
 import Layout from "@/Layouts/Layout"
 import Button from "@/components/Button"
 import { FaAngleRight } from "react-icons/fa"
