@@ -2,9 +2,11 @@ import Input from "@/components/Input"
 import Button from "@/components/Button"
 import InputErrorHelper from "@/components/InputErrorHelper"
 import ErrorHelper from "@/components/ErrorHelper"
-import { useState, useEffect } from "react"
+import { useContext, useState } from "react"
 import { useForm } from "@inertiajs/inertia-react"
 import toastPromise from "@/lib/toastPromise"
+
+import { LayoutContext } from "@/Layouts/Layout"
 
 const InputGroupWithErrorHelper = ({
   error,
@@ -51,19 +53,6 @@ const ContactForm = ({
   errorMessage = "Some errors occurred",
   postRoute = route("contacts")
 }) => {
-  console.log(
-    "CONTACT FORM ::: ",
-    name,
-    email,
-    phone,
-    address,
-    city,
-    province_or_state,
-    country,
-    postal_code,
-    postRoute
-  )
-
   const { data, setData, post, processing, errors } = useForm({
     name: name,
     email: email,
@@ -76,6 +65,8 @@ const ContactForm = ({
   })
 
   const [errorState, setErrorState] = useState(false)
+
+  const { toastPromise } = useContext(LayoutContext)
 
   const handleChange = (event) => {
     setData(event.target.name, event.target.value)
@@ -177,14 +168,14 @@ const ContactForm = ({
           />
         </div>
 
-        <div className="flex items-center justify-between mt-10">
+        <div className="flex flex-col sm:flex-row items-center justify-between mt-10">
           <div>{deleteButton && deleteButton}</div>
-          <div className="flex justify-end text-bold flex-1">
+          <div className="text-bold sm:flex sm:justify-end sm:flex-1">
             <Button
               buttonType={buttonType}
               type="submit"
               text={submitButtonText}
-              className={`${processing && "opacity-30"}`}
+              className={`w-full sm:w-fit mt-4 sm:mt-0 ${processing && "opacity-30"}`}
             />
           </div>
         </div>

@@ -1,4 +1,4 @@
-import toast from "react-hot-toast"
+import { toast } from "react-toastify";
 
 const toastPromise = (
   promise,
@@ -6,22 +6,24 @@ const toastPromise = (
   successMessage,
   errorMessage
 ) => {
-  toast.promise(
-    promise,
-    {
-      loading: loadingMessage,
+
+  toast.dismiss()
+
+  toast.promise(promise, {
+      pending: loadingMessage,
       success: successMessage,
       error: errorMessage
-    },
-    {
-      success: {
-        duration: 2000
-      },
-      error: {
-        duration: 2000
-      }
-    }
-  )
+  },
+  {
+    position: "top-center",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    draggable: true,
+    // progress: undefined,
+  }
+  );
+
 }
 
 export default toastPromise

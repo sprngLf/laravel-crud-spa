@@ -28,7 +28,7 @@
     },
     "dependencies": {
         "dompurify": "^2.3.6",
-        "react-hot-toast": "^2.2.0",
-        "react-icons": "^4.3.1"
+        "react-icons": "^4.3.1",
+        "react-toastify": "^8.2.0"
     }
 }

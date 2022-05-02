@@ -1,20 +1,26 @@
-import { createContext } from "react"
+import { createContext, useEffect } from "react"
 import Nav from "./Nav"
 import SideNav from "./SideNav"
 import { usePage } from "@inertiajs/inertia-react"
-import { Toaster } from "react-hot-toast"
+
+import { ToastContainer, Flip } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+import toastPromise from "@/lib/toastPromise"
+
 export const LayoutContext = createContext()
 
 const Layout = ({ children }) => {
   const { auth } = usePage().props
 
   const contextValue = {
-    auth: auth
+    auth: auth,
+    toastPromise
   }
 
   return (
     <LayoutContext.Provider value={contextValue}>
-      <Toaster position="top-center" />
+      <ToastContainer newestOnTop={true} transition={Flip} pauseOnHover={true} />
       <div className="md:flex">
         <SideNav />
         <div className="md:flex-1">

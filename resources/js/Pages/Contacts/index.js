@@ -10,9 +10,6 @@ import Input from "@/Components/Input"
 
 const index = () => {
   const { props: { contacts }, url } = usePage()
-  
-  console.log("contacts :: ", contacts)
-  console.log("url :: ", url)
 
   const [searchQuery, setSearchQuery] = useState("")
 
@@ -34,12 +31,12 @@ const index = () => {
         </div>
       </header>
       <div className="py-6 px-4 md:py-12 md:px-10">
-        <div className="w-full flex items-center justify-between">
-          <div className="">
+        <div className="w-full flex flex-col sm:flex-row sm:items-center sm:justify-between">
+          <div className="w-full sm:w-fit">
             <Input
               name="search"
               placeholder="Search name"
-              className="w-64 lg:w-80 px-3"
+              className="w-full sm:w-64 lg:w-80 px-3"
               value={searchQuery}
               onChange={(e) => {
                 setSearchQuery(e.target.value)
@@ -52,7 +49,7 @@ const index = () => {
             />
           </div>
           <Link href={route("contacts.create")}>
-            <Button text={"Create contact"} />
+            <Button text={"Create contact"} className="w-full mt-4 sm:mt-0 sm:w-fit" />
           </Link>
         </div>
 

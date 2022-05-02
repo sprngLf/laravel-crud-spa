@@ -10,8 +10,6 @@ import toastPromise from "@/lib/toastPromise"
 const Edit = () => {
   const { contact } = usePage().props
 
-  console.log("contact", contact)
-
   const { delete: destroy } = useForm({ delete: "1" })
 
   const handleDelete = () => {
@@ -23,7 +21,7 @@ const Edit = () => {
       <p><span class="font-semibold">Phone:</span> ${contact?.phone ? contact.phone : "none"}</p>
       <p><span class="font-semibold">Address:</span> ${contact?.address ? contact.address : "none"}</p>
       `,
-      `Delete contact`,
+      `Delete`,
       () => {
         const myPromise = new Promise((resolve, reject) => {
           destroy(route("contacts.delete", contact), {

@@ -4,8 +4,6 @@ import DOMPurify from "dompurify"
 const Pagination = ({ last_page, links, searchQuery }) => {
   if (last_page < 2) return null
 
-  console.log("last_page", last_page)
-
   return (
     <nav
       role="navigation"
