@@ -6,6 +6,8 @@
 
         <title inertia>{{ config('app.name', 'Laravel') }}</title>
 
+        <link rel="shortcut icon" href="{{ asset('img/favicon.ico') }}">
+
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
 
