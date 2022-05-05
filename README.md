@@ -1,4 +1,4 @@
-# Simple CRUD Single page application with Laravel Inertia ReactJS andTailwindcss
+# Simple CRUD Single page application(SPA) with Laravel Inertia ReactJS andTailwindcss
 Simple CRUD Single-page application with Laravel, Inertia, ReactJS, and Tailwindcss. Auth is provided by laravel/breeze.
 
 ## Preview
@@ -13,11 +13,11 @@ Make sure you have `git`, `php` *(my version is PHP 8.1.2)*, [`composer`](https:
 
 Clone into crud_sample  
 ```
-git clone https://github.com/sprngLf/Simple-CRUD-Single-page-application-with-Laravel-Inertia-ReactJS-and-Tailwindcss.git crud_sample
+git clone https://github.com/sprngLf/laravel-crud-spa.git
 ```
 Go to crud_sample  
 ```
-cd crud_sample
+cd laravel-crud-spa
 ```
 Make `.env` file  
 ```
