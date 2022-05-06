@@ -11,11 +11,11 @@ Simple CRUD Single-page application with Laravel, Inertia, ReactJS, and Tailwind
 ## Installation  
 Make sure you have `git`, `php` *(my version is PHP 8.1.2)*, [`composer`](https://getcomposer.org/) and `node` installed
 
-Clone into crud_sample  
+Clone  
 ```
 git clone https://github.com/sprngLf/laravel-crud-spa.git
 ```
-Go to crud_sample  
+Go to directory  
 ```
 cd laravel-crud-spa
 ```
